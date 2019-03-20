@@ -29,14 +29,8 @@ searchHandler = e => {
   this.setState({ filteredPosts: posts})
 }
 
-const Authenticate = (App) => {
-  class extends Component {
-    state = {
-      loggedIn: false,
-    }
 
   render() {
-    if (this.state.loggedIn === true){
     return (
       
       <div className="App">
@@ -49,16 +43,9 @@ const Authenticate = (App) => {
           }
         />
 
-      </div>})
-      else return(
-      <h1>Please Login</h1>
-      )
+      </div>)
     
   }
-
-}
-}
-
 
 }
 
