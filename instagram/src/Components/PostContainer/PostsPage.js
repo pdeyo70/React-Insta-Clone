@@ -7,9 +7,7 @@ const PostsPage = (props) => {
         <SearchBar 
           searchTerm={this.props.searchTerm}
           searchPosts={this.props.searchHandler} />
-        <PostContainer posts={this.props.filteredPosts.length > 0
-            ? this.props.filteredPosts
-            : this.props.state.posts
+        <PostContainer posts={
           }
         />
         </div>)

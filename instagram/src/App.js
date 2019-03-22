@@ -29,13 +29,18 @@ searchHandler = e => {
   })
   this.setState({ filteredPosts: posts})
 }
+filteredPosts = () => {
+  this.props.filteredPosts.length > 0
+  ? this.props.filteredPosts
+  : this.props.state.posts }
 
 
   render() {
+    let filtered = filteredPosts()
     return (
       
       <div className="App">
-        <PostsPage />
+        <PostsPage posts={filtered}/>
       </div>)
     
   }
