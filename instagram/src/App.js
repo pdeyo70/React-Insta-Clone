@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import PostContainer from './Components/PostContainer/PostContainer'
 import SearchBar from './Components/SearchBar/SearchBar'
-import dummyData from './dummy-data';
+import dummyData from './dummy-data'
+import PostsPage from './Components/PostContainer/PostsPage'
 
 class App extends Component {
   constructor(props) {
@@ -34,15 +35,7 @@ searchHandler = e => {
     return (
       
       <div className="App">
-        <SearchBar 
-          searchTerm={this.state.searchTerm}
-          searchPosts={this.searchHandler} />
-        <PostContainer posts={this.state.filteredPosts.length > 0
-            ? this.state.filteredPosts
-            : this.state.posts
-          }
-        />
-
+        <PostsPage />
       </div>)
     
   }
